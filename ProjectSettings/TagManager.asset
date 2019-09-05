@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Capsule
   - Teleporter
+  - Item
   layers:
   - Default
   - TransparentFX

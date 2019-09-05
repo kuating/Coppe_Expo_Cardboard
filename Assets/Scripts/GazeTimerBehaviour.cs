@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GazeTimerBehaviour : MonoBehaviour
 {
+    //public Material material;
+
     private Animator animator;
     public GvrReticlePointer reticlePointer;
     public Material timerMaterial;
@@ -22,6 +24,9 @@ public class GazeTimerBehaviour : MonoBehaviour
 
     private void Start()
     {
+        //Graphic graphic = GetComponent<Graphic>();
+        //graphic.material = this.material;
+        
         canvasTransform = UITimer.transform.parent; 
         //rendererComponent.sortingOrder = reticlePointer.reticleSortingOrder;
         //Canvas.GetDefaultCanvasMaterial().shader = timerMaterial.shader;

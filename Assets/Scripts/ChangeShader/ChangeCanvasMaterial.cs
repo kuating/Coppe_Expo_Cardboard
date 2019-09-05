@@ -6,9 +6,15 @@ public class ChangeCanvasMaterial : MonoBehaviour
 {
 
     public Material material;
-    public bool apply = false;
+    //public bool apply = false;
 
-    private void Update()
+    private void Start()
+    {
+        Graphic graphic = GetComponent<Graphic>();
+        graphic.material = this.material;
+    }
+
+    /*private void Update()
     {
         if (apply)
         {
@@ -16,5 +22,5 @@ public class ChangeCanvasMaterial : MonoBehaviour
             Graphic graphic = GetComponent<Graphic>();
             graphic.material = this.material;
         }
-    }
+    }*/
 }
