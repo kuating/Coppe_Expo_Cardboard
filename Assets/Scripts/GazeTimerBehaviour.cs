@@ -62,6 +62,10 @@ public class GazeTimerBehaviour : MonoBehaviour
                 {
                     raycastResult.gameObject.gameObject.GetComponent<TeleporterBehaviour>().TeleportPlayer();
                 }
+                if (raycastResult.gameObject.CompareTag("Item"))
+                {
+                    raycastResult.gameObject.gameObject.GetComponent<Item>().Select();
+                }
                 Debug.DrawRay(raycastResult.screenPosition, (this.transform.position - raycastResult.worldPosition) * raycastResult.distance, Color.magenta);
             }
         }
