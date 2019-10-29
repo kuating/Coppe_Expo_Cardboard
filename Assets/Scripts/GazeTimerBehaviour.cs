@@ -56,15 +56,15 @@ public class GazeTimerBehaviour : MonoBehaviour
                 animator.SetBool("Complete", true);
                 if (raycastResult.gameObject.CompareTag("Capsule"))
                 {
-                    raycastResult.gameObject.gameObject.GetComponent<CapsuleBehaviourScript>().SetDance();
+                    raycastResult.gameObject.GetComponent<CapsuleBehaviourScript>().SetDance();
                 }
                 if (raycastResult.gameObject.CompareTag("Teleporter"))
                 {
-                    raycastResult.gameObject.gameObject.GetComponent<TeleporterBehaviour>().TeleportPlayer();
+                    raycastResult.gameObject.GetComponent<TeleporterBehaviour>().TeleportPlayer();
                 }
                 if (raycastResult.gameObject.CompareTag("Item"))
                 {
-                    raycastResult.gameObject.gameObject.GetComponent<Item>().Select();
+                    raycastResult.gameObject.GetComponent<Item>().Select();
                 }
                 Debug.DrawRay(raycastResult.screenPosition, (this.transform.position - raycastResult.worldPosition) * raycastResult.distance, Color.magenta);
             }

@@ -37,7 +37,7 @@ public class TeleporterBehaviour : MonoBehaviour
 
     public void TeleportPlayer()
     {
-        player.transform.DOMove(new Vector3(this.transform.position.x, player.transform.position.y, this.transform.position.z), 10f);
+        player.transform.DOMove(new Vector3(this.transform.position.x, player.transform.position.y, this.transform.position.z), step);
         /*if (moving == false)
         {
             destination = new Vector3(this.transform.position.x, player.transform.position.y, this.transform.position.z);
