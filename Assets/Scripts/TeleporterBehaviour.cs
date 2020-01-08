@@ -2,24 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Video;
 
 public class TeleporterBehaviour : MonoBehaviour
 {
     public GameObject player;
+    public VideoClip idle;
+    private GameObject videoM;
     private bool moving = false;
     private Vector3 destination;
     [SerializeField]
     private float step = 2f;
-    // Start is called before the first frame update
+    
     void Start()
     {
-        
+        videoM = GameObject.FindGameObjectWithTag("Video");
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (moving == true)
+        /* OLD MOVINGTOWARDS APPORACH
+         * 
+         * if (moving == true)
         {
             if (player.transform.position != destination)
             {
@@ -37,8 +42,11 @@ public class TeleporterBehaviour : MonoBehaviour
 
     public void TeleportPlayer()
     {
+        
         player.transform.DOMove(new Vector3(this.transform.position.x, player.transform.position.y, this.transform.position.z), step);
-        /*if (moving == false)
+        /* OLD MOVINGTOWARDS APPORACH
+         * 
+         * if (moving == false)
         {
             destination = new Vector3(this.transform.position.x, player.transform.position.y, this.transform.position.z);
             moving = true;

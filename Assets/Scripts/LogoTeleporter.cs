@@ -2,14 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Video;
 
 public class LogoTeleporter : MonoBehaviour
 {
     public GameObject player;
     //private bool moving = false;
     //private Vector3 destination;
-    public float step = 2f;
-    public Material mat;
+    public VideoClip videoClip;
+    private GameObject videoM;
+    /*public Material mat;
+    */
+
+    void Start()
+    {
+        videoM = GameObject.FindGameObjectWithTag("Video");
+    }
 
     void Update()
     {
@@ -18,8 +26,7 @@ public class LogoTeleporter : MonoBehaviour
 
     public void TeleportToRoom()
     {
-        //PLACEHOLDER
-        RenderSettings.skybox = mat;
+        videoM.GetComponent<VideoPlayer>().clip = videoClip;
     }
 
     /*public void MovePlayer()
