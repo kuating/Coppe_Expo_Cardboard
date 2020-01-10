@@ -9,6 +9,7 @@ TagManager:
   - Item
   - Video
   - Logo
+  - StageManager
   layers:
   - Default
   - TransparentFX

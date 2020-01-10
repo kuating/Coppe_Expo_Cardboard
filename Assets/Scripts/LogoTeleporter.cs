@@ -6,27 +6,21 @@ using UnityEngine.Video;
 
 public class LogoTeleporter : MonoBehaviour
 {
-    public GameObject player;
+    //public GameObject player;
     //private bool moving = false;
     //private Vector3 destination;
-    public VideoClip videoClip;
-    private GameObject videoM;
     /*public Material mat;
     */
+    public int logoId;
 
     void Start()
     {
-        videoM = GameObject.FindGameObjectWithTag("Video");
+        
     }
 
     void Update()
     {
 
-    }
-
-    public void TeleportToRoom()
-    {
-        videoM.GetComponent<VideoPlayer>().clip = videoClip;
     }
 
     /*public void MovePlayer()
